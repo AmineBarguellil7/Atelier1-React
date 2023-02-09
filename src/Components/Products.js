@@ -29,7 +29,8 @@ function Products() {
   return (
     <div>
       <Alert show={showMsg} variant="success">
-        <Alert.Heading>Bienvenue!</Alert.Heading>
+        <Alert.Heading>Hey, Welcome To Our Shop MyStore <br /> Thank you for choosing our store, we hope you enjoy your shopping experience! </Alert.Heading>
+        <hr />
       </Alert>
       <Product
         title={products[0].name}
