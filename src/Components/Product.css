@@ -1,0 +1,17 @@
+@import '../App.css';
+
+
+.card {
+    display: inline-block;
+    margin-left:100px;
+    width:18rem;
+}
+
+
+.btn-primary {
+    margin-right: 50px;
+}
+
+.btn-info {
+    margin-left:50px;
+}
