@@ -1,17 +1,22 @@
 @import '../App.css';
 
 
-.card {
-    display: inline-block;
-    margin-left:100px;
-    width:18rem;
+.div1 {
+    display:inline-flex;
 }
 
+
+
+.card {
+    width:18rem;
+    margin-right: 100px;
+    margin-left: 50px;
+}
 
 .btn-primary {
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
-.btn-info {
-    margin-left:50px;
-}
+
+
+
