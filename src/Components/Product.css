@@ -3,20 +3,24 @@
 
 .div1 {
     display:inline-flex;
+    margin-top:40px;
 }
 
 
 
 .card {
     width:18rem;
-    margin-right: 100px;
-    margin-left: 50px;
+    margin-right: 70px;
+    margin-left: 70px;
 }
 
 .btn-primary {
     margin-right: 20px;
 }
 
+@keyframes clignote { 
+    50% { opacity: 0.5; }
+ }
 
 
 

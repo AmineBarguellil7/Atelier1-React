@@ -22,11 +22,22 @@ function Product(props) {
     }
    }
   
+   const cardStyle = {
+    backgroundColor: like > 5 ? '#DB7090' : 'none',
+    animation: like > 5 ? 'clignote 2s linear infinite' : 'none',
+  };
+
+  const keyframes = `
+    @keyframes clignote {
+      50% { opacity: 0.5; }
+    }
+  `;
   
   
   return (
     <div className='div1'>
-        <Card className="card">
+      <style>{keyframes}</style>
+      <Card className="card" style={cardStyle}>
           <Card.Img    src={require('../assets/images/'+props.img)} width="286" height="180" />
           <Card.Body>
             <Card.Title>{props.name}</Card.Title>
