@@ -1,37 +1,32 @@
-import React, { Component } from "react";
+import React,{Component} from "react";
 
 export default class TestComponent extends Component {
-  constructor() {
-    super();
-    this.state = { counter: 0 };
-  }
+constructor(){
+super();
+this.state={
+    counter:0
+}
+console.log("Hello from constructor")
+}
+//constructer ->renderer ->didmount
+componentDidMount(){
+    console.log("hello from mounting")
+}
 
-  componentDidMount() {
-    console.log("Hello from mounting")
-  }
-
-  handleClick() {
-    this.setState((prevstate) => {
-        return {
-          ...prevstate,
-          counter: prevstate.counter + 1,
-        };
-      });
-    }
-  
-
-  render() {
+    handleclick(){
+        this.setState((prevState)=>{
+            return {
+              ...prevState,
+              counter:prevState.counter+1
+            }
+    })}
+    
+    render(){
     return (
-      <div>
-        <p>Hello</p>
-        <p>{this.state.counter}</p>
-        <h1>title</h1>
-        <button
-          onClick={() => {this.handleClick()}}
-        >
-          +
-        </button>
-      </div>
-    );
-  }
+    <div>
+        <h1> {this.state.counter}</h1>
+                <button onClick={()=>this.handleclick()}> ++ !</button>
+    </div>
+    )
+    }
 }

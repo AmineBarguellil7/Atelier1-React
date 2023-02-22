@@ -15,7 +15,9 @@ function Products() {
     setTimeout(() => {
       setShowMsg(false);
     }, 3000);
-  }, []);
+  }, []);     //ki yebda tableau vide kiyenha componentDidmount
+
+  //ki nahi le parametre theni array twalli le fct titlanca mellowel wa m3a kol changement le ayy variable
 
 
   const buy = () => {

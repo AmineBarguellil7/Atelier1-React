@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import './Product.css';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -40,7 +42,9 @@ function Product(props) {
       <Card className="card" style={cardStyle}>
           <Card.Img    src={require('../assets/images/'+props.img)} width="286" height="180" />
           <Card.Body>
+          <NavLink to={`${props.name}`}>
             <Card.Title>{props.name}</Card.Title>
+            </NavLink>
             <Card.Text>
             Price : {props.price} DT
             </Card.Text>
