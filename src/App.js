@@ -1,13 +1,15 @@
 import { Route, Routes } from "react-router-dom";
-import Products from "./Components/Products";
 import './App.css'
 import Test from "./Components/Test";
 import React from "react";
 import NavigationBar from "./Components/NavigationBar";
 import NotFound from "./Components/NotFound";
-import ProductDetails from "./Components/ProductDetails";
 
-//const productDetails =React.lazy (() => import('./Components/ProductDetails'))
+
+const ProductDetails =React.lazy (() => import('./Components/ProductDetails'))
+const Products=React.lazy (() => import('./Components/Products'));
+
+
 function App() {
   return (
     <>
