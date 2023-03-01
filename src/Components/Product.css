@@ -13,14 +13,23 @@
     margin-right: 70px;
     margin-left: 70px;
 }
+.t1 {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+} 
 
-.btn-primary {
-    margin-right: 20px;
+.t2{
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  margin-top: 10px;
 }
 
-@keyframes clignote { 
-    50% { opacity: 0.5; }
- }
+
+
+
+
 
 
 

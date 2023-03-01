@@ -6,8 +6,14 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 
 export default function NavigationBar() {
+  const inactive = {
+    color:"red",
+    textDecoration:'none'
+  };
+
   const active = {
-    textDecoration: "none",
+    color:"green",
+    textDecoration:"none"
   };
   return (
     <Container>
@@ -17,9 +23,10 @@ export default function NavigationBar() {
             My Store
           </Navbar.Brand>
           <Nav className="me-auto">
-            <NavLink to="products" style={({isActive}) => !isActive?active:undefined}>
+            <NavLink to="products" style={({isActive}) => !isActive?inactive:active}>
               Products
             </NavLink>
+            <NavLink to="addproduct" style={{textDecoration:"none",marginLeft:"10px"}}>Add New Product</NavLink>
           </Nav>
         </Container>
       </Navbar>

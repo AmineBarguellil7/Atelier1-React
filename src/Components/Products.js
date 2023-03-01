@@ -1,16 +1,22 @@
-import { useState,useEffect } from "react";
+import { React,useState,useEffect } from "react";
 import { Alert } from "react-bootstrap";
 import Product from "./Product";
+import { getallProducts } from "../service/api";
 
 function Products() {
 
-  const products = require("../Data/products.json");
+  const [products, setProducts] = useState([]);
+  const getproducts = async () => {
+    const response = await getallProducts();
+    setProducts(response.data);
+  };
 
   const [showAlert, setShowAlert] = useState(false);
 
   const [showMsg, setShowMsg] = useState(false);
 
-  useEffect(() => {       //useEffect prend deux parametres fonction wa array thot fih les variables ki titbadel valeur mta3 ayy variable fonction elli fi wost useEffect titlanca mara okhra.
+  useEffect(() => { 
+    getproducts();      //useEffect prend deux parametres fonction wa array thot fih les variables ki titbadel valeur mta3 ayy variable fonction elli fi wost useEffect titlanca mara okhra.
     setShowMsg(true);     //useEffect(()=> {},[]) kan yitnaha tableau yo93od m3a kol changement fel composant titlanca le fonction.
     setTimeout(() => {
       setShowMsg(false);
@@ -34,7 +40,8 @@ function Products() {
       </Alert> 
       { products.map((p) => (
         <Product
-          key={p.name}
+        key={p.id}
+          id={p.id}
           name={p.name}
           price={p.price}
           quantity={p.quantity}

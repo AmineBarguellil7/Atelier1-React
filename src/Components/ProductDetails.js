@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import { useParams } from "react-router-dom";
-import Products from '../Data/products.json'
 import Card from 'react-bootstrap/Card';
 import { Col,Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container"
+import {getallProducts} from "../service/api"
 
 
 const ProductDetails =() =>{
-    const {name} =useParams()
-    const product=Products.find(product=>product.name===name)
+    const {id} =useParams()
+    const [product,setproduct]=useState();
+    
+
+    const getProductById =async(id)=>{
+        const response = await getallProducts(id);
+        setproduct(response.data);
+    }
+
+
+
+    useEffect(()=>{
+        getProductById(id);
+      },[id])
+
+
+
     return(
+        <div>
+        {product===undefined ?(<h1 style={{textAlign:"center"}}>Product does not exist</h1>):(
         <Container style={{ marginTop: "30px" }}>
         <Row>
         <Col md={4}>
@@ -55,7 +72,8 @@ const ProductDetails =() =>{
         </Row>
         </Col>
         </Row>
-        </Container>
+        </Container>)}
+        </div>
     )
 }
 
