@@ -2,30 +2,21 @@
   "products": [
     {
       "id": 2,
-      "name": "Mouse",
-      "price": "30",
-      "img": "product2.jpg",
-      "like": 0,
-      "quantity": 0,
-      "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page"
-    },
-    {
-      "name": "mootez",
-      "price": "16.5",
+      "name": "Mousy",
+      "price": "12",
       "img": "product3.jpg",
       "like": 0,
-      "quantity": "30.9",
-      "description": "shit",
+      "quantity": "10",
+      "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire"
+    },
+    {
+      "name": "amine",
+      "price": "522",
+      "img": "product3.jpg",
+      "like": 0,
+      "quantity": "212",
+      "description": "dadn",
       "id": 3
-    },
-    {
-      "name": "Bread",
-      "price": "10",
-      "img": "product3.jpg",
-      "like": 0,
-      "quantity": "4",
-      "description": "good",
-      "id": 4
     }
   ]
 }
