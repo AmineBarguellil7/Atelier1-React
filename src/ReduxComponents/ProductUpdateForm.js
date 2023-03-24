@@ -18,7 +18,7 @@ export default function ProductUpdateForm() {
     description: "",
   });
   const dispatch = useDispatch();
-  const { id, name, price, img, like, quantity, description } = product;
+  const {  name, price, img, like, quantity, description } = product;
   
   useEffect(() => {
     getProduct();

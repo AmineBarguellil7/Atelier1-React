@@ -16,7 +16,7 @@ export default function AddProduct() {
         description: "",
     });
     const dispatch = useDispatch();
-    const { name, price, img, like, quantity, description } = product;
+    const { name, price,  quantity, description } = product;
     const onValueChange = (e) => {
         setProduct({ ...product, [e.target.name]: e.target.value });
 
