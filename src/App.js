@@ -16,12 +16,14 @@ import Products from "./ReduxComponents/Products";
 
 
 
+
 const ProductUpdateForm = React.lazy(() => import('./ReduxComponents/ProductUpdateForm'));
 const ProductFrom = React.lazy(() => import('./ReduxComponents/ProductForm'));
 // const ProductDetails =React.lazy (() => import('./Components/ProductDetails'))
 const ProductDetails = React.lazy(() => import('./ReduxComponents/ProductDetails'));
 const NotFound = React.lazy(() => import('./Components/NotFound'));
 // const AddProduct=React.lazy(()=>import("./Components/AddProduct"))
+const Cart = React.lazy(() => import('./ReduxComponents/Cart'));
 
 
 function App() {
@@ -43,6 +45,7 @@ function App() {
         <Route path="/test/:username" element={<Test />}></Route>
         <Route path="/addproduct" element={<ProductFrom />}></Route>
         <Route path="/modifyproduct/:id" element={<ProductUpdateForm />}></Route>
+        <Route path="/cart" element={<Cart />} />
         <Route path="/deleteProduct/:id" element={<Products />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>

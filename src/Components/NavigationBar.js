@@ -4,8 +4,11 @@ import '../App.css'
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import { useSelector } from 'react-redux';
+import { selectCountAll } from "../redux/slices/cartSlice";
 
 export default function NavigationBar() {
+  const CartNumber = useSelector(selectCountAll);
   const inactive = {
     color:"red",
     textDecoration:'none'
@@ -27,6 +30,7 @@ export default function NavigationBar() {
               Products
             </NavLink>
             <NavLink to="addproduct" style={{textDecoration:"none",marginLeft:"10px"}}>Add New Product</NavLink>
+            <NavLink to="cart" style={({isActive}) => !isActive?inactive:active}>Panier ({CartNumber})</NavLink>
           </Nav>
         </Container>
       </Navbar>

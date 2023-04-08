@@ -22,7 +22,6 @@ export default function AddProduct() {
 
     };
     const onFileHandle = (e) => {
-        console.log(e.target.files);
         setProduct({ ...product, [e.target.name]: e.target.files[0].name });
 
     };

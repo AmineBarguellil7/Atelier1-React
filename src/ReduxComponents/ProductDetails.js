@@ -9,13 +9,13 @@ export default function ProductDetails() {
     const [product, setProduct] = useState();
 
     const getProduct = async (productId) => {
-        const result = await getallProducts(id);
+        const result = await getallProducts(productId);
         setProduct(result.data);
     }
 
     useEffect(()=> {
         getProduct(id);
-    }, []);
+    }, [id]);
 
     return (
         <>

@@ -51,12 +51,7 @@ export default function Products() {
         ProductCards = prods.map((product, index) => (
             <Product
                 key={index}
-                id={product.id}
-                img={product.img}
-                name={product.name}
-                description={product.description}
-                price={product.price}
-                quantity={product.quantity}
+                product={product}
                 handleBuy={handleBuy}
                 deleteProd={deleteProd}
             />
